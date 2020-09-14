@@ -1,0 +1,44 @@
+.informacion {
+    width: 100%;
+    position: relative;
+    margin-top: 30px;
+}
+
+.texto {
+    margin-top: 10%;
+    margin-left: 15%;
+    width: 400px;
+    position: absolute;
+    z-index: 1;
+    background-color: var(--primary);
+    padding: 40px;
+}
+
+.imagen {
+    position: absolute;
+    width: 800px;
+    margin-left: 35%;
+    margin-top: 5%;
+    z-index: -1;
+}
+
+.imagen img {
+    width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+    .texto {
+        margin-top: 0;
+        margin-left: 0;
+        width: 100%;
+        position: relative;
+        z-index: 0;
+    }
+    .imagen {
+        margin-top: 0;
+        margin-left: 0;
+        width: 100%;
+        position: relative;
+        z-index: 0;
+    }
+}

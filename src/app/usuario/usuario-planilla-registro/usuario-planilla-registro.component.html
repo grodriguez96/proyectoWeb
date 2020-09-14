@@ -1,0 +1,204 @@
+<div class="planilla-formulario">
+  <div class="titulo text-center pt-5 pb-5">
+    <h2>REGISTRO: DATOS PERSONALES</h2>
+  </div>
+  <form [formGroup]="formulario">
+    <div class="form-row">
+      <!--PRIMER NOMBRE-->
+      <div class="form-group col-md-6">
+        <label for="nombre">Primer nombre</label>
+        <input type="text" class="form-control"
+          (change)="formulario.patchValue({nombre: $event.target.value.toUpperCase()})" [ngClass]=" {'is-invalid': nombre.invalid && (nombre.touched || nombre.dirty), 'is-valid' :
+                    nombre.valid}" formControlName="nombre" name="nombre" />
+        <div class="invalid-feedback" *ngIf=" nombre.invalid && nombre.errors.required">
+          Campo requerido.
+        </div>
+        <div class="invalid-feedback" *ngIf=" nombre.invalid && nombre.errors.minlength">
+          Nombre debera tener mas de 2 letras.
+        </div>
+        <div class="invalid-feedback" *ngIf=" nombre.invalid && nombre.errors.maxlength">
+          Nombre no debera tener mas de 20 letras.
+        </div>
+      </div>
+      <!--SEGUNDO NOMBRE-->
+      <div class="form-group col-md-6">
+        <label for="segundo_nombre">Segundo nombre</label>
+        <input type="text" class="form-control"
+          (change)="formulario.patchValue({segundo_nombre: $event.target.value.toUpperCase()})"
+          [ngClass]="{'is-invalid': segundo_nombre.invalid && (segundo_nombre.touched || segundo_nombre.dirty) , 'is-valid': segundo_nombre.valid && segundo_nombre.dirty }"
+          formControlName="segundo_nombre" name="segundo_nombre" />
+        <div class="invalid-feedback" *ngIf=" segundo_nombre.invalid && segundo_nombre.errors.minlength">
+          Segundo nombre debera tener mas de 2 letras.
+        </div>
+        <div class="invalid-feedback" *ngIf=" segundo_nombre.invalid && segundo_nombre.errors.maxlength">
+          Segundo nombre no debera tener mas de 20 letras.
+        </div>
+
+      </div>
+    </div>
+
+    <div class="form-row">
+      <!--APELLIDO-->
+      <div class="form-group col-md-6">
+        <label for="apellido">Primer apellido</label>
+        <input type="text" class="form-control"
+          (change)="formulario.patchValue({apellido: $event.target.value.toUpperCase()})"
+          [ngClass]="{ 'is-invalid': apellido.invalid && (apellido.touched || apellido.dirty) , 'is-valid': apellido.valid }"
+          formControlName="apellido" name="apellido" />
+        <div class="invalid-feedback" *ngIf=" apellido.invalid && apellido.errors.required">
+          Campo requerido.
+        </div>
+        <div class="invalid-feedback" *ngIf=" apellido.invalid && apellido.errors.minlength">
+          Apellido debera tener mas de 2 letras.
+        </div>
+        <div class="invalid-feedback" *ngIf=" apellido.invalid && apellido.errors.maxlength">
+          Apellido no debera tener mas de 20 letras.
+        </div>
+      </div>
+
+      <!--SEGUNDO APELLIDO-->
+      <div class="form-group col-md-6">
+        <label for="segundo_apellido">Segundo apellido</label>
+        <input type="text" class="form-control"
+          (change)="formulario.patchValue({segundo_apellido: $event.target.value.toUpperCase()})"
+          [ngClass]="{ 'is-invalid': segundo_apellido.invalid && (segundo_apellido.touched || segundo_apellido.dirty) , 'is-valid': segundo_apellido.valid && segundo_apellido.dirty }"
+          formControlName="segundo_apellido" name="segundo_apellido" />
+        <div class="invalid-feedback" *ngIf=" segundo_apellido.invalid && segundo_apellido.errors.minlength">
+          Segundo Apellido debera tener mas de 2 letras.
+        </div>
+        <div class="invalid-feedback" *ngIf=" segundo_apellido.invalid && segundo_apellido.errors.maxlength">
+          Segundo Apellido no debera tener mas de 20 letras.
+        </div>
+      </div>
+    </div>
+    <!--TELELFONO-->
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="telefono">Telefono</label>
+        <input type="tel" class="form-control"
+          [ngClass]="{ 'is-invalid': telefono.invalid && (telefono.touched || telefono.dirty) , 'is-valid': telefono.valid}"
+          formControlName="telefono" name="telefono" />
+        <div class="invalid-feedback" *ngIf=" telefono.invalid && telefono.errors.required">
+          Campo requerido.
+        </div>
+        <div class="invalid-feedback"
+          *ngIf=" (telefono.dirty || telefono.touched) && telefono.invalid && telefono.errors.pattern">
+          Telefono debera 01158965896
+        </div>
+      </div>
+      <!--DNI-->
+      <div class="form-group col-md-4">
+        <label for="dni">DNI</label>
+        <input type="number" class="form-control"
+          [ngClass]="{ 'is-invalid': dni.invalid && (dni.touched || dni.dirty) , 'is-valid': dni.valid}"
+          formControlName="dni" name="dni" />
+        <div class="invalid-feedback" *ngIf=" dni.invalid && dni.errors.required">
+          Campo requerido.
+        </div>
+        <div class="invalid-feedback" *ngIf=" dni.invalid && dni.errors.max">
+          DNI no debera tener mas de 9 numeros.
+        </div>
+      </div>
+      <!--GENERO-->
+      <div class="form-group col-md-4">
+        <label for="genero">Genero</label>
+        <input type="text" class="form-control"
+          (change)="formulario.patchValue({genero: $event.target.value.toUpperCase()})"
+          [ngClass]="{ 'is-invalid': genero.invalid && (genero.touched || genero.dirty) , 'is-valid': genero.valid}"
+          formControlName="genero" name="genero" />
+        <div class="invalid-feedback" *ngIf=" genero.invalid && genero.errors.required">
+          Campo requerido.
+        </div>
+        <div class="invalid-feedback"
+          *ngIf=" (genero.dirty || genero.touched) && genero.invalid && genero.errors.pattern">
+          Genero debe ser "masculino" o "femenino".
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <!--DIRECCION-->
+      <div class="form-group col-md-6">
+        <label for="direccion">Direccion</label>
+        <input type="text" (change)="formulario.patchValue({direccion: $event.target.value.toUpperCase()})"
+          class=" form-control"
+          [ngClass]="{ 'is-invalid': direccion.invalid && (direccion.touched || direccion.dirty) , 'is-valid': direccion.valid}"
+          formControlName="direccion" name="direccion" />
+        <div class="invalid-feedback" *ngIf=" direccion.invalid && direccion.errors.required">
+          Campo requerido.
+        </div>
+        <div class="invalid-feedback" *ngIf=" direccion.invalid && direccion.errors.minlength">
+          Direccion debera tener mas de 5 letras.
+        </div>
+        <div class="invalid-feedback" *ngIf=" direccion.invalid && direccion.errors.maxlength">
+          Direccion no debera tener mas de 50 letras.
+        </div>
+      </div>
+      <!--CODIGO POSTAL-->
+      <div class="form-group col-md-2">
+        <label for="codigo_postal">Codigo postal</label>
+        <input type="number" class="form-control"
+          [ngClass]="{ 'is-invalid': codigo_postal.invalid && (codigo_postal.touched || codigo_postal.dirty) , 'is-valid': codigo_postal.valid}"
+          formControlName="codigo_postal" name="codigo_postal" />
+        <div class="invalid-feedback" *ngIf=" codigo_postal.invalid && codigo_postal.errors.required">
+          Campo requerido.
+        </div>
+        <div class="invalid-feedback"
+          *ngIf=" (codigo_postal.dirty || codigo_postal.touched) && codigo_postal.invalid && codigo_postal.errors.pattern">
+          Codigo postal debera tener 4 numeros.
+        </div>
+      </div>
+      <!--NACIONALIDAD-->
+      <div class="form-group col-md-4">
+        <label for="nacionalidad">Nacionalidad</label>
+        <input type="text" class="form-control"
+          (change)="formulario.patchValue({nacionalidad: $event.target.value.toUpperCase()})"
+          [ngClass]="{ 'is-invalid': nacionalidad.invalid && (nacionalidad.touched || nacionalidad.dirty) , 'is-valid': nacionalidad.valid}"
+          formControlName="nacionalidad" name="nacionalidad" />
+        <div class="invalid-feedback" *ngIf=" nacionalidad.invalid && nacionalidad.errors.required">
+          Campo requerido.
+        </div>
+        <div class="invalid-feedback"
+          *ngIf=" (nacionalidad.dirty || nacionalidad.touched) && nacionalidad.invalid && nacionalidad.errors.pattern">
+          Por los momentos solo "venezuela" o "argentina".
+        </div>
+      </div>
+    </div>
+    <!--ESTADO CIVIL-->
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="estado_civil">Estado Civil</label>
+        <input type="text" class="form-control"
+          (change)="formulario.patchValue({estado_civil: $event.target.value.toUpperCase()})"
+          [ngClass]="{ 'is-invalid': estado_civil.invalid && (estado_civil.touched || estado_civil.dirty) , 'is-valid': estado_civil.valid}"
+          formControlName="estado_civil" name="estado_civil" />
+        <div class="invalid-feedback" *ngIf=" estado_civil.invalid && estado_civil.errors.required">
+          Campo requerido.
+        </div>
+        <div class="invalid-feedback"
+          *ngIf=" (estado_civil.dirty || estado_civil.touched) && estado_civil.invalid && estado_civil.errors.pattern">
+          Estado civil debera ser: casado(a), soltero(a), divorciado(a), viudo(a) o concubino(a).
+        </div>
+      </div>
+
+      <!--FECHA NACIMIENTO-->
+      <div class="form-group col-md-6">
+        <label for="fecha_nacimiento">Fecha de nacimiento</label>
+        <input type="date" class="form-control"
+          [ngClass]="{ 'is-invalid': fecha_nacimiento.invalid && (fecha_nacimiento.touched || fecha_nacimiento.dirty) , 'is-valid': fecha_nacimiento.valid}"
+          formControlName="fecha_nacimiento" name="fecha_nacimiento" />
+        <div class="invalid-feedback" *ngIf=" fecha_nacimiento.invalid && fecha_nacimiento.errors.required">
+          Campo requerido.
+        </div>
+        <div class="invalid-feedback"
+          *ngIf=" (fecha_nacimiento.dirty || fecha_nacimiento.touched) && fecha_nacimiento.invalid && fecha_nacimiento.errors.pattern">
+          Fecha de nacimiento debera ser de la forma: yyyy-mm-dd. Ejemplo: 2004-11-26.
+        </div>
+      </div>
+    </div>
+    <div class="boton text-center">
+      <button type="submit" class="btn btn-primary " [disabled]="!formulario.valid" (click)="guardarDatos()">Guardar
+        y Continuar</button>
+    </div>
+  </form>
+</div>

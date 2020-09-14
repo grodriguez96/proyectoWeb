@@ -1,0 +1,14 @@
+.separador {
+    width: 90%;
+    margin: auto;
+}
+
+.separador-color {
+    color: var(--primary);
+}
+
+@media screen and (max-width: 768px) {
+    .separador h3 {
+        font-size: 1.5rem;
+    }
+}

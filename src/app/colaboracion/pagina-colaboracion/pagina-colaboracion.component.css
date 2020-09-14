@@ -1,0 +1,31 @@
+.colaboracion {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    background-color: var(--secondary);
+}
+
+.separador {
+    background-color: white;
+}
+
+.cartas {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+}
+
+.carta {
+    background-color: var(--primary);
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    .cartas {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+}

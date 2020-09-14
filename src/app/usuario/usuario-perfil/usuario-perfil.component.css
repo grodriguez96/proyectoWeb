@@ -1,0 +1,61 @@
+.u-perfil {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 30px auto;
+    grid-template-areas: "contenedor titulo" "contenedor tabla";
+}
+
+.contenedor {
+    grid-row: contenedor;
+    grid-column: contenedor;
+}
+
+.titulo {
+    margin: auto;
+    width: 80%;
+    height: 30px;
+    background-color: tomato;
+}
+
+.tabla {
+    margin: auto;
+    width: 80%;
+    grid-row: tabla;
+    grid-column: tabla;
+}
+
+.u-foto {
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.u-foto img {
+    width: 100%;
+}
+
+.expedientes {
+    grid-row: expedientes;
+    grid-column: expedientes;
+    background-color: teal;
+}
+
+@media screen and (max-width: 768px) {
+    .u-perfil{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,auto);
+        grid-template-areas: "contenedor"
+                             "titulo"
+                             "tabla";
+    }
+    .u-foto{
+        width: 30%;
+    }
+    .expedientes{
+        margin: auto;
+        width: 80%;
+    }
+}

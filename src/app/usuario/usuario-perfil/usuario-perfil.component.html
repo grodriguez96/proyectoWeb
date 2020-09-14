@@ -1,0 +1,78 @@
+<div class="u-perfil mt-5">
+
+    <div class="cotenedor">
+        <div class="u-foto pt-3">
+            <img src="https://galmoro.com/proyectoweb/assets/img/user-male-icon.png" alt="">
+        </div>
+        <div class="expedientes mt-5 text-center">
+            <h4>EXPEDIENTES ACTIVOS</h4>
+        </div>
+        <div class="text-center mt-5">
+            <p>USTED TIENE ACTUALMENTE EL EXPEDIENTE <br>{{datosUsuario.numExpedienteNino}}</p>
+        </div>
+    </div>
+
+    <div class="titulo text-center">
+        <h3>INFORMACION PERSONAL</h3>
+    </div>
+
+    <div class="tabla">
+        <table class="table table-md table-borderless">
+            <tbody>
+                <tr>
+                    <th scope="row">NOMBRE: </th>
+                    <td>{{datosUsuario.nombre}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">SEGUNDO NOMBRE:</th>
+                    <td>{{datosUsuario.segundoNombre}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">APELLIDO:</th>
+                    <td>{{datosUsuario.apellido}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">SEGUNDO APELLIDO:</th>
+                    <td>{{datosUsuario.segundoApellido}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">GENERO:</th>
+                    <td>{{datosUsuario.genero}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">DNI:</th>
+                    <td>{{datosUsuario.dni}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">CORREO ELECTRONICO:</th>
+                    <td>{{datosUsuario.correoElectronico}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">TELEFONO:</th>
+                    <td>{{datosUsuario.telefono}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">FECHA DE NACIMIENTO:</th>
+                    <td>{{datosUsuario.fechaNacimiento}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">NACIONALIDAD:</th>
+                    <td>{{datosUsuario.nacionalidad}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">ESTADO CIVIL:</th>
+                    <td>{{datosUsuario.estadoCivil}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">DIRECCION:</th>
+                    <td>{{datosUsuario.direccion}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">CODIGO POSTAL:</th>
+                    <td>{{datosUsuario.codigoPostal}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

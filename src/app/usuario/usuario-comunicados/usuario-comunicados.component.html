@@ -1,0 +1,24 @@
+<div class="u-comunicados">
+    <div class="titulo text-center pt-5 pb-5">
+        <h2>TABLERO DE COMUNICADOS PUBLICOS</h2>
+    </div>
+    <div class="card-columns text-center">
+
+        <div class=" comunicado pt-2 pb-2" *ngFor="let expediente of Expedientes">
+            <div *ngIf="(expediente.estado == 0); else cambiocolor">
+                <app-comunicado numExpediente="{{expediente.numeroExpediente}}" numNinos="{{expediente.numeroNinos}}"
+                    descripcion="{{expediente.descripcion}}" estado="ACTIVA" cssFondo="fondo-1" boton="0">
+                </app-comunicado>
+            </div>
+
+            <ng-template #cambiocolor>
+                <app-comunicado numExpediente="{{expediente.numeroExpediente}}" numNinos="{{expediente.numeroNinos}}"
+                    descripcion="{{expediente.descripcion}}" estado="EN PROCESO" cssFondo="fondo-2 " boton="1"
+                    mensaje="Este expediente se encuentra actualmente en proceso de adopcion. Estar atentos si llega a ocurrir cambios.">
+                </app-comunicado>
+            </ng-template>
+
+        </div>
+
+    </div>
+</div>

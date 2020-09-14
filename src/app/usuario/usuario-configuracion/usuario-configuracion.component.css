@@ -1,0 +1,12 @@
+.u-configuracion {
+  width: 95%;
+  margin: auto;
+}
+
+.form-control {
+  text-transform: uppercase;
+}
+
+.form-control.minuscula {
+  text-transform: none !important;
+}

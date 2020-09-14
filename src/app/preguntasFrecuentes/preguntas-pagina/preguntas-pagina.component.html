@@ -1,0 +1,19 @@
+<div class="preguntas text-center pb-5">
+
+    <div class="titulo mt-5 mb-5">
+        <h2>Preguntas frecuentes sobre adoptar</h2>
+    </div>
+
+    <div class="cartas">
+
+        <div class="imagen">
+            <img src="https://galmoro.com/proyectoweb/assets/img/bg-adoption.jpg" alt="">
+        </div>
+
+        <div class="carta pos{{i+1}} " *ngFor="let datos of datosPreguntas; let i=index">
+            <app-carta titular="{{datos.pregunta}}" texto="{{datos.respuesta}}" cssCarta="border-primary"
+                cssTitular="bg-primary"></app-carta>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,35 @@
+.portada {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    background-color: var(--secondary);
+}
+
+.imagen {
+    width: 100%;
+}
+
+.imagen img {
+    width: 100%;
+}
+
+.titulo-color {
+    color: var(--primary);
+}
+
+.boton {
+    align-self: center;
+    justify-self: center;
+}
+
+@media screen and (max-width: 992px) {
+    .portada {
+        grid-template-rows: repeat(3, auto);
+    }
+    .display-4 {
+        font-size: 2.5rem;
+        font-weight: 150;
+        line-height: 1.2;
+    }
+}

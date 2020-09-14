@@ -1,0 +1,50 @@
+<div class="nosotros text-center">
+
+    <div class="titulo mt-5">
+        <h2> Quienes somos? </h2>
+    </div>
+
+    <div class="texto mt-5 mb-2">
+
+        <p> <b><i>CASA HOGAR</i></b> es una Asociación Civil sin fines de lucro que se conformó con el objeto de
+            concretar acciones que correspondan con el interés superior del niño/a y adolescente tendientes a favorecer
+            el pleno desarrollo físico, evolutivo,
+            psicológico, cultural, espiritual, moral y social para lograr el desenvolvimiento de sus potencialidades y
+            el despliegue integral y armónico de su personalidad. (art. 3 Convención de los Derechos del Niño).
+        </p>
+
+        <p><b><i>CASA HOGAR</i></b> cobija a 25 niños, niñas y adolescentes en situación de vulnerabilidad social. Los
+            niños que ingresan al hogar cuentan con medidas de protección judicial por casos de negligencia y abandono,
+            violencia familiar, maltrato,
+            abuso sexual, entre otras causas. En Soles en el Camino trabajamos para garantizar el pleno cumplimiento de
+            todos los derechos de los niñ@s que ingresan al Hogar para que desarrollen sus potencialidades y transiten
+            esta etapa de la mejor manera
+            posible y, en un futuro, puedan construir su propio proyecto de vida. Todo ello en un marco de contención,
+            afecto, profesionalismo y respeto por lo que hacemos.
+        </p>
+    </div>
+
+
+    <div class="video pt-3 pb-3">
+        <video src="https://galmoro.com/proyectoweb/assets/video/about-bg.mp4" loop muted autoplay></video>
+    </div>
+
+    <div class="separador">
+        <app-separador texto1="NO ES LA CARNE Y LA SANGRE, SINO" textoColor="EL CORAZON,"
+            texto2="LO QUE NOS HACE PADRES E HIJOS."></app-separador>
+    </div>
+
+    <div class="cartas mb-5">
+        <div class=" cartas-titulo mt-5">
+            <h2>Conoce nuestros staff</h2>
+        </div>
+
+        <div class="carta" *ngFor="let datos of datosEmpleados">
+            <app-carta titulo="{{datos.nombre}}" imagen="{{datos.imagen}}" texto="{{datos.biografia}}"
+                pie="{{datos.cargo}}" cssCarta="altura-2 border-primary" cssImagen="rounded-circle"
+                cssTitular="bg-transparent border-0"></app-carta>
+        </div>
+
+    </div>
+
+</div>

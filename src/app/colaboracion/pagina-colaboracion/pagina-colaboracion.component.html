@@ -1,0 +1,17 @@
+<div class="colaboracion text-center">
+
+    <div class="titulo mt-5 mb-5">
+        <h2>Como puedes colaborar</h2>
+    </div>
+
+    <div class="cartas pb-5">
+        <div class="carta" *ngFor="let datos of datosColaboracion">
+            <app-carta titulo="{{datos.titulo}}" imagen="{{datos.imagen}}" texto="{{datos.descripcion}}" cssCarta="altura-3 border-light" cssTitular="bg-transparent border-0"></app-carta>
+        </div>
+    </div>
+
+    <div class="separador">
+        <app-separador texto1="A veces sentimos que lo que hacemos es tan sólo una gota en el mar;" textoColor="pero el mar sería menos si le faltara una gota."></app-separador>
+    </div>
+
+</div>

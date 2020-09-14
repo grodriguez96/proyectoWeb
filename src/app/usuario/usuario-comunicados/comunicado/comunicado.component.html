@@ -1,0 +1,32 @@
+<div class="card text-center">
+    <div class="card-header {{cssFondo}}">
+        Numero de Expediente: {{numExpediente}}
+    </div>
+    <div class="card-body bg-secondary">
+        <h5 class="card-title">Se busca familia para {{numNinos}} niño(s)</h5>
+        <p class="card-text "></p>
+        <button type="button" class="btn btn-primary" (click)="abrirModal(plantilla)">Mas informacion</button>
+    </div>
+    <div class="card-footer text-muted">
+        ESTADO: {{estado}}
+    </div>
+</div>
+
+<!-- Modal -->
+
+
+<ng-template #plantilla>
+    <div class="modal-header bg-primary">
+        <h4 class="modal-title pull-left"><b>Descripcion del caso</b></h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="referModal.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body text-center bg-secondary">
+        {{descripcion}} <br>
+        <p class="text-warning"><small>{{mensaje}}</small></p>
+        <button type="button" class="btn btn-danger btn-lg mr-3 mt-3" (click)="declinar()">Cerrar</button>
+        <button type="button" class="btn btn-success btn-lg ml-3 mt-3" *ngIf="boton == 0" (click)="confirmar()">Estoy
+            interesdo(a)</button>
+    </div>
+</ng-template>

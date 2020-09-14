@@ -1,0 +1,114 @@
+.preguntas {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    background-color: var(--secondary);
+    overflow: hidden;
+}
+
+.cartas {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(13, auto);
+    grid-template-areas: "pos1 imagen" "pos2 imagen" "pos3 imagen" "pos4 imagen" "pos5 imagen" "pos6 imagen" "pos7 imagen" "pos8 imagen" "pos9 imagen" "pos10 imagen" "pos11 imagen" "pos12 imagen" "pos13 imagen";
+}
+
+.imagen img {
+    opacity: 0.8;
+    height: 400vh;
+}
+
+.imagen {
+    margin-top: 50%;
+    height: 100%;
+    width: 100%;
+    grid-row: imagen;
+    grid-column: imagen;
+    overflow: hidden;
+}
+
+.carta {
+    width: 95%;
+    margin: auto;
+}
+
+.pos1 {
+    grid-row: pos1;
+    grid-column: pos1;
+}
+
+.pos2 {
+    grid-row: pos2;
+    grid-column: pos2;
+}
+
+.pos3 {
+    grid-row: pos3;
+    grid-column: pos3;
+}
+
+.pos4 {
+    grid-row: pos4;
+    grid-column: pos4;
+}
+
+.pos5 {
+    grid-row: pos5;
+    grid-column: pos5;
+}
+
+.pos6 {
+    grid-row: pos6;
+    grid-column: pos6;
+}
+
+.pos7 {
+    grid-row: pos7;
+    grid-column: pos7;
+}
+
+.pos8 {
+    grid-row: pos8;
+    grid-column: pos8;
+}
+
+.pos9 {
+    grid-row: pos9;
+    grid-column: pos9;
+}
+
+.pos10 {
+    grid-row: pos10;
+    grid-column: pos10;
+}
+
+.pos11 {
+    grid-row: pos11;
+    grid-column: pos11;
+}
+
+.pos12 {
+    grid-row: pos12;
+    grid-column: pos12;
+}
+
+.pos13 {
+    grid-row: pos13;
+    grid-column: pos13;
+}
+
+@media screen and (max-width: 768px) {
+    .cartas {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .imagen {
+        display: none;
+    }
+}

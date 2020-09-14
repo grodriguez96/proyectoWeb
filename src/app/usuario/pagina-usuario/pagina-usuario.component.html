@@ -1,0 +1,76 @@
+<div class="usuario pb-5">
+
+    <div class="navegacion-vertical" *ngIf="scrWidth>768; else telefono">
+        <div class="row">
+            <div class="col-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-inicio-tab" data-toggle="pill" href="#v-pills-inicio"
+                        role="tab" aria-controls="v-pills-inicio" aria-selected="true">Inicio</a>
+                    <a class="nav-link" id="v-pills-perfil-tab" data-toggle="pill" href="#v-pills-perfil" role="tab"
+                        aria-controls="v-pills-perfil" aria-selected="false">Perfil</a>
+                    <a class="nav-link" id="v-pills-comunicado-tab" data-toggle="pill" href="#v-pills-comunicado"
+                        role="tab" aria-controls="v-pills-comunicado" aria-selected="false">Comunicados Publicos</a>
+                    <a class="nav-link" id="v-pills-configuracion-tab" data-toggle="pill" href="#v-pills-configuracion"
+                        role="tab" aria-controls="v-pills-configuracion" aria-selected="false">Configuracion</a>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-inicio" role="tabpanel"
+                        aria-labelledby="v-pills-inicio-tab">
+                        <app-usuario-inicio></app-usuario-inicio>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-perfil" role="tabpanel" aria-labelledby="v-pills-perfil-tab">
+                        <app-usuario-perfil></app-usuario-perfil>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-comunicado" role="tabpanel"
+                        aria-labelledby="v-pills-comunicado-tab">
+                        <app-usuario-comunicados></app-usuario-comunicados>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-configuracion" role="tabpanel"
+                        aria-labelledby="v-pills-configuracion-tab">
+                        <app-usuario-configuracion></app-usuario-configuracion>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #telefono>
+    <div class="navegacion-horizontal">
+        <ul class="nav nav-pills mb-3 pl-5" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="pills-inicio-tab" data-toggle="pill" href="#pills-inicio" role="tab"
+                    aria-controls="pills-inicio" aria-selected="true">Inicio</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="pills-perfil-tab" data-toggle="pill" href="#pills-perfil" role="tab"
+                    aria-controls="pills-perfil" aria-selected="false">Perfil</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="pills-comunicado-tab" data-toggle="pill" href="#pills-comunicado" role="tab"
+                    aria-controls="pills-comunicado" aria-selected="false">Comunicados publicos</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="pills-configuracion-tab" data-toggle="pill" href="#pills-configuracion"
+                    role="tab" aria-controls="pills-configuracion" aria-selected="false">Configuracion</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-inicio" role="tabpanel" aria-labelledby="pills-inicio-tab">
+                <app-usuario-inicio></app-usuario-inicio>
+            </div>
+            <div class="tab-pane fade" id="pills-perfil" role="tabpanel" aria-labelledby="pills-perfil-tab">
+                <app-usuario-perfil></app-usuario-perfil>
+            </div>
+            <div class="tab-pane fade" id="pills-comunicado" role="tabpanel" aria-labelledby="pills-comunicado-tab">
+                <app-usuario-comunicados></app-usuario-comunicados>
+            </div>
+            <div class="tab-pane fade" id="pills-configuracion" role="tabpanel"
+                aria-labelledby="pills-configuracion-tab">
+                <app-usuario-configuracion></app-usuario-configuracion>
+            </div>
+        </div>
+    </div>
+</ng-template>

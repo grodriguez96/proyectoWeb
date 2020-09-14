@@ -1,0 +1,38 @@
+<div class="inicio-sesion pb-5">
+    <div class="titulo text-center pt-5 pb-5">
+        <h2>INICIAR SESION</h2>
+    </div>
+    <div class="formulario">
+        <form [formGroup]="formulario">
+
+            <!--CORREO-->
+            <div class="form-group">
+                <label for="correo">Correo electronico</label>
+                <input type="email" class="form-control"
+                    [ngClass]="{ 'is-invalid': correo.invalid && (correo.touched || correo.dirty ), 'is-valid': correo.valid}"
+                    formControlName="correo" name="correo" />
+
+                <div class="invalid-feedback" *ngIf=" correo.invalid && correo.errors.required">
+                    Campo requerido.
+                </div>
+            </div>
+
+            <!--CONTRASEÑA-->
+            <div class="form-group">
+                <label for="clave">Contraseña</label>
+                <input type="password" class="form-control"
+                    [ngClass]="{ 'is-invalid': clave.invalid && (clave.touched || clave.dirty), 'is-valid': clave.valid}"
+                    formControlName="clave" name="clave" />
+
+                <div class="invalid-feedback" *ngIf=" clave.invalid && clave.errors.required">
+                    Campo requerido.
+                </div>
+            </div>
+
+            <div class="boton text-center">
+                <button type="submit" (click)="iniciarSesion()" [disabled]="!formulario.valid"
+                    class="btn btn-primary">Iniciar</button>
+            </div>
+        </form>
+    </div>
+</div>

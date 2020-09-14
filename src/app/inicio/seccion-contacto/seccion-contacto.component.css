@@ -1,0 +1,56 @@
+.contacto {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    background-color: var(--secondary);
+}
+
+.titulo {
+    grid-column: span 2;
+}
+
+.texto {
+    width: 80%;
+    margin: auto;
+}
+
+.redes {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+}
+
+.direccion {
+    grid-column: span 2;
+}
+
+.redes img {
+    max-width: 50px;
+}
+
+.facebook .instagram .twitter .whatsapp {
+    vertical-align: text-bottom;
+}
+
+.reset {
+    clear: both;
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    .contacto {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-gap: 0;
+    }
+    .titulo {
+        grid-column: unset;
+    }
+    .direccion {
+        grid-column: unset;
+    }
+    .texto {
+        width: 80%;
+    }
+}

@@ -1,0 +1,21 @@
+.usuario {
+    width: 100%;
+    overflow: hidden;
+}
+
+.navegacion-vertical {
+    display: block;
+}
+
+.navegacion-horizontal {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navegacion-horizontal {
+        display: block;
+    }
+    .navegacion-vertical {
+        display: none;
+    }
+}

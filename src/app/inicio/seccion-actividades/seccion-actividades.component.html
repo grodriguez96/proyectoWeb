@@ -1,0 +1,17 @@
+<div class="actividades text-center">
+    <div class="titulo pt-5 pb-3">
+        <h2>El trabajo en el hogar</h2>
+    </div>
+
+    <div class="texto pb-3">
+        <p>Brindamos a los niños y niñas que ingresan a <i><b>Casa Hogar</b></i> todo lo necesario para que puedan transitar su desarrollo integral y encaminar sus vidas de la mejor manera posible. <br> Por ello le ofrecemos:</p>
+    </div>
+
+
+    <div class="cartas mb-5">
+        <div class="carta" *ngFor="let datos of datosActividades">
+            <app-carta titulo="{{datos.titulo}}" imagen="{{datos.imagen}}" texto="{{datos.texto}}" cssCarta="altura-1 border-primary" cssTitular="bg-transparent border-0"></app-carta>
+        </div>
+    </div>
+
+</div>
