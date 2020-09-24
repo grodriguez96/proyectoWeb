@@ -15,7 +15,6 @@ export class AutenticacionGuard implements CanActivate {
     var usuario = this.servicioAutenticar.conexionFirebase.authState.subscribe(e => {
       if (e == null) {
         this.router.navigate(['inicio'])
-        console.log("entre")
         return usuario = false
       }
     });
