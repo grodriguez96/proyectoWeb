@@ -15,7 +15,7 @@ export class UsuarioPlanillaRegistroComponent implements OnInit {
   formulario: FormGroup;
   correo: string = this.servDatosUsuario.obtenerCorreo();
 
-  private telefonoPatron: any = /^[0-9]{11}}$/;
+  private telefonoPatron: any = /^[0-9]{11}$/;
   private generoPatron: any = /^(MASCULINO|masculino|FEMENINO|femenino|Masculino|Femenino)$/;
   private nacionalidadPatron: any = /^(VENEZUELA|venezuela|ARGENTINA|argentina|Venezuela|Argentina)$/;
   private estadoCivilPatron: any = /^(CASAD[O|A]|casad[o|a]|Casad[o|a]|SOLTER[O|A]|solter[o|a]|Solter[o|a]|VIUD[O|A]|viud[o|a]|Viud[o|a]|DIVORCIAD[O|A]|divorciad[o|a]|Divorciad[o|a]|CONCUBIN[O|A]|concubin[o|a]|Concubin[o|a])$/;

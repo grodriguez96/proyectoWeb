@@ -15,10 +15,10 @@ export class UsuarioConfiguracionComponent {
   formulario: FormGroup;
   correo: string = this.servDatosUsuario.obtenerCorreo();
 
-  private telefonoPatron: any = /^[0-9]{3}-[0-9]{4}-[0-9]{4}$/;
-  private generoPatron: any = /^(MASCULINO|masculino|FEMENINO|femenino)$/;
-  private nacionalidadPatron: any = /^(VENEZUELA|venezuela|ARGENTINA|argentina)$/;
-  private estadoCivilPatron: any = /^(CASAD[O|A]|casad[o|a]|SOLTER[O|A]|solter[o|a]|VIUD[O|A]|viud[o|a]|DIVORCIAD[O|A]|divorciad[o|a]|CONCUBIN[O|A]|concubin[o|a])$/;
+  private telefonoPatron: any = /^[0-9]{11}$/;
+  private generoPatron: any = /^(MASCULINO|masculino|FEMENINO|femenino|Masculino|Femenino)$/;
+  private nacionalidadPatron: any = /^(VENEZUELA|venezuela|ARGENTINA|argentina|Venezuela|Argentina)$/;
+  private estadoCivilPatron: any = /^(CASAD[O|A]|casad[o|a]|Casad[o|a]|SOLTER[O|A]|solter[o|a]|Solter[o|a]|VIUD[O|A]|viud[o|a]|Viud[o|a]|DIVORCIAD[O|A]|divorciad[o|a]|Divorciad[o|a]|CONCUBIN[O|A]|concubin[o|a]|Concubin[o|a])$/;
   private codigoPostalPatron: any = /^[0-9]{4}$/;
 
   constructor(private constructorFormulario: FormBuilder, private servicioConexion: ConexionBDService, private servDatosUsuario: datosUsuarioService) {
