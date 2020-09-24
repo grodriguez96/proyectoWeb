@@ -25,5 +25,4 @@ export class BarraNavegacionComponent {
       console.log(error);
     }
   }
-
 }
